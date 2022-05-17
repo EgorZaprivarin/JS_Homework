@@ -149,7 +149,7 @@ Cat.prototype.constructor = Cat;
 
 Cat.prototype.feed = function () {
    Animal.prototype.feed.apply(this);
-   Cat.prototype._satisfaction();
+   this._satisfaction();
 
    return this;
 };
