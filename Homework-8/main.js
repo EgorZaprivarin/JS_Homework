@@ -25,11 +25,7 @@ findPositiveNumber([-1, 0, 2, 34, -2]);
 // Задание 3 ///////////////////////////////////////////
 
 function isPalindrome(word) {
-   if (word.toLowerCase() === word.toLowerCase().split('').reverse().join('')) {
-      return true;
-   } else {
-      return false
-   };
+   return word.toLowerCase() === word.toLowerCase().split('').reverse().join('');
 };
 
 isPalindrome('шалаШ');
@@ -37,14 +33,10 @@ isPalindrome('шалаШ');
 // Задание 4 ///////////////////////////////////////////
 
 function areAnagrams(word1, word2) {
-   if (word1.toLowerCase().split('').sort().join('') === word2.toLowerCase().split('').sort().join('')) {
-      return true;
-   } else {
-      return false;
-   };
+   return word1.toLowerCase().split('').sort().join('') === word2.toLowerCase().split('').sort().join('');
 };
 
-areAnagrams('хомяк', 'яКоХм')
+areAnagrams('хомяк', 'яКоХм');
 
 // Задание 5 ///////////////////////////////////////////
 
@@ -83,16 +75,20 @@ divideArr([1, 2, 3, 4, 5, 6, 7, 8], 3);
 // Задание 6* ///////////////////////////////////////////
 
 function degreeOfTwo(number) {
-   while (true) {
-      number /= 2;
-      if (number == 1) {
-         return true;
-      } else if (number < 1) {
-         return false;
+   if (number === 1) {
+      return true;
+   } else {
+      while (true) {
+         number /= 2;
+         if (number === 1) {
+            return true;
+         } else if (number < 1) {
+            return false;
+         };
       };
    };
 };
 
-degreeOfTwo(64);
+degreeOfTwo(-8);
 
 ////////////////////////////////////////////////////////
