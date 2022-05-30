@@ -32,8 +32,6 @@ input.addEventListener('blur', function () {
 
    parentTd.textContent = input.value;
    input.value = '';
-
-   input.remove();
 });
 
 input.addEventListener('keypress', function (el) {
