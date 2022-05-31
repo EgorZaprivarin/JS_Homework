@@ -1,0 +1,35 @@
+.first_field label {
+   font-size: 20px;
+   font-weight: bold;
+   margin-right: 10px;
+}
+.second_field label {
+   font-size: 20px;
+   font-weight: bold;
+   margin-right: 12px;
+}
+.first_field {
+   margin: 15px;
+}
+.second_field {
+   margin: 0px 15px 15px;
+}
+button {
+   width: 65px;
+   height: 25px;
+   margin: 0px 0px 15px 50px;
+}
+input {
+   height: 25px;
+   width: 200px;
+}
+table {
+   margin-left: 50px;
+}
+.size {
+   width: 50px;
+   height: 50px;
+}
+.black {
+   background-color: black;
+}
