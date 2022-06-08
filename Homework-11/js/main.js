@@ -19,18 +19,18 @@ var table = document.createElement('table');
 table.setAttribute('border', '1px');
 
 button.addEventListener('click', function () {
-   if ((isNaN(+inputX.value) || +inputX.value < 1 || +inputX.value > 10) && (isNaN(+inputY.value) || +inputY.value < 1 || +inputY.value > 10)) {
+   if ((isNaN(+inputX.value) || +inputX.value < 1 || +inputX.value > 10 || +inputX.value % 1 !== 0) && (isNaN(+inputY.value) || +inputY.value < 1 || +inputY.value > 10 || +inputY.value % 1 !== 0)) {
       inputX.value = '';
       inputY.value = '';
       inputX.focus();
       button.disabled = true;
       alert('Введите корректное значение в поле X и Y - целое число от 1 до 10');
-   } else if (isNaN(+inputX.value) || +inputX.value < 1 || +inputX.value > 10) {
+   } else if (isNaN(+inputX.value) || +inputX.value < 1 || +inputX.value > 10 || +inputX.value % 1 !== 0) {
       inputX.value = '';
       inputX.focus();
       button.disabled = true;
       alert('Введите корректное значение в поле X - целое число от 1 до 10');
-   } else if (isNaN(+inputY.value) || +inputY.value < 1 || +inputY.value > 10) {
+   } else if (isNaN(+inputY.value) || +inputY.value < 1 || +inputY.value > 10 || +inputY.value % 1 !== 0) {
       inputY.value = '';
       inputY.focus();
       button.disabled = true;

@@ -26,17 +26,15 @@ var linksSecondPar = secondPar.children;
 secondPar.onclick = function () {
    var target = event.target;
 
-   for (var i = 0; i < linksSecondPar.length; i++) {
-      if (target === linksSecondPar[i]) {
-         event.preventDefault();
+   if (target.tagName === 'A') {
+      event.preventDefault();
 
-         if (localStorage.getItem(linksSecondPar[i].textContent) === null) {
-            localStorage.setItem(linksSecondPar[i].textContent, JSON.stringify({ path: linksSecondPar[i].href }));
-            linksSecondPar[i].href = '#';
-            alert('Информация о ссылке сохранена.');
-         } else {
-            alert(JSON.parse(localStorage.getItem(linksSecondPar[i].textContent)).path);
-         };
+      if (localStorage.getItem(target.textContent) === null) {
+         localStorage.setItem(target.textContent, JSON.stringify({ path: target.href }));
+         target.href = '#';
+         alert('Информация о ссылке сохранена.');
+      } else {
+         alert(JSON.parse(localStorage.getItem(target.textContent)).path);
       };
    };
 };

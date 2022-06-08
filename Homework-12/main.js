@@ -61,6 +61,10 @@ function objectComparison(firstObj, secondObj) {
          if (!objectComparison(firstObj[k], secondObj[k])) {
             return false;
          };
+      } else if (typeof (secondObj[k]) === 'function') {
+         if (firstObj[k].toString() !== secondObj[k].toString()) {
+            return false;
+         };
       } else if (firstObj[k] !== secondObj[k]) {
          return false;
       };
